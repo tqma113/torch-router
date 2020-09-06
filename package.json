@@ -1,0 +1,31 @@
+{
+  "name": "torch-router",
+  "version": "0.0.0",
+  "description": "A router for myself.",
+  "main": "dist/index.js",
+  "repository": "git@github.com:tqma113/torch-router.git",
+  "author": "Ma Tianqi <mtq1997@126.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "release": "node scripts/release.js"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "chalk": "^4.1.0",
+    "enquirer": "^2.3.6",
+    "execa": "^4.0.3",
+    "jest": "^26.4.2",
+    "minimist": "^1.2.5",
+    "semver": "^7.3.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "path-to-regexp": "^6.1.0"
+  }
+}

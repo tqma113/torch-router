@@ -16,7 +16,7 @@ export interface Route<T> {
 }
 
 export interface Params {
-  [propName: string]: unknown
+  [propName: string]: string
 }
 
 export interface Matches<T> {

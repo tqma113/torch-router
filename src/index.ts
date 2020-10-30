@@ -30,7 +30,7 @@ export interface Matcher<T> {
 }
 
 
-export type Router<T> = (path: string) => T | null
+export type Router<T> = (path: string) => Matches<T> | null
 
 export function createRouter<T>(draftRoutes: DraftRoute<T>[]): Router<T> {
   const matcher = createMatcher(draftRoutes)
@@ -41,7 +41,7 @@ export function createRouter<T>(draftRoutes: DraftRoute<T>[]): Router<T> {
     if (matches === null) {
       return null
     } else {
-      return matches.module
+      return matches
     }
   }
 

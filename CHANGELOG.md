@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/tqma113/torch-router/compare/v1.1.0...v1.1.1) (2020-10-30)
+
+
+### Bug Fixes
+
+* **type:** params ([8cd34ab](https://github.com/tqma113/torch-router/commit/8cd34ab97fe103266310b768aeea5e860f8c383a))
+
+
+
 # [1.1.0](https://github.com/tqma113/torch-router/compare/v1.0.0...v1.1.0) (2020-10-30)
 
 

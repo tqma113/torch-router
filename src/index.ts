@@ -4,7 +4,7 @@ import type { Key, Path } from 'path-to-regexp'
 export type DraftRoute<T> = {
   keys?: Key[]
   regexp?: RegExp
-  path: string
+  path: Path
   module: T
 }
 

@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/tqma113/torch-router/compare/v1.1.1...v1.1.2) (2020-11-05)
+
+
+### Features
+
+* **all:** support multiple path ([60ce873](https://github.com/tqma113/torch-router/commit/60ce873733c636934034cce49880095ed4ae725d))
+
+
+
 ## [1.1.1](https://github.com/tqma113/torch-router/compare/v1.1.0...v1.1.1) (2020-10-30)
 
 

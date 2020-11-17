@@ -25,35 +25,12 @@ export interface Matches<T> {
   module: T
 }
 
-export interface Matcher<T> {
-  (pathname: string): Matches<T> | null
-}
-
-
 export type Router<T> = (path: string) => Matches<T> | null
 
-export function createRouter<T>(draftRoutes: DraftRoute<T>[]): Router<T> {
-  const matcher = createMatcher(draftRoutes)
-
-  function getModule(path: string) {
-    const matches = matcher(path || '/')
-
-    if (matches === null) {
-      return null
-    } else {
-      return matches
-    }
-  }
-
-  return (path) => {
-    return getModule(path)
-  }
-}
-
-function createMatcher<T>(routes: DraftRoute<T>[]): Matcher<T> {
+export function createRouter<T>(routes: DraftRoute<T>[]): Router<T> {
   const finalRoutes: Route<T>[] = routes.map(createRoute)
   const routeLength: number = finalRoutes.length
-  const matcher: Matcher<T> = (pathname) => {
+  const router: Router<T> = (pathname = '') => {
     const finalPathname = cleanPath(pathname)
     for (let i = 0; i < routeLength; i++) {
       const route: Route<T> = finalRoutes[i]
@@ -75,7 +52,7 @@ function createMatcher<T>(routes: DraftRoute<T>[]): Matcher<T> {
     return null
   }
 
-  return matcher
+  return router
 }
 
 function createRoute<T>(route: DraftRoute<T>): Route<T> {

@@ -41,12 +41,11 @@ export function createRouter<T>(routes: DraftRoute<T>[]): Router<T> {
         continue
       }
       const params: Params = getParams(strMatches, route.keys)
-      const module = route.module
 
       return {
         path: route.path,
         params,
-        module,
+        module: route.module,
       }
     }
     return null
